@@ -1,0 +1,16 @@
+
+type Meal{
+    id:String!
+    name:String!
+    quantity:String!
+    taste:String!
+    nutriation:Nutriation
+}
+
+type Nutriation{
+   score:Int!
+}
+
+type Query {
+    showMeal : [Meal]!
+}

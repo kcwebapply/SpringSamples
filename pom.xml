@@ -23,6 +23,7 @@
         <module>springdb</module>
         <module>batch</module>
         <module>SpringSwagger</module>
+        <module>GraphQL</module>
     </modules>
 
     <properties>
