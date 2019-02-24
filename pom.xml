@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>sample-list</groupId>
+    <groupId>com.kcwebapply</groupId>
     <artifactId>sample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -22,8 +22,8 @@
     <modules>
         <module>springdb</module>
         <module>batch</module>
-        <module>SpringSwagger</module>
-        <module>GraphQL</module>
+        <module>spring-swagger</module>
+        <module>spring-graphql</module>
     </modules>
 
     <properties>
