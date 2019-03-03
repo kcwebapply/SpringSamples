@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.kcwebapply.batch.job")
+@ComponentScan(basePackages = "com.kcwebapply.batch")
 @EnableScheduling
 public class BatchApplication {
 
