@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 public class UserEvaluationController {
 
@@ -24,6 +27,18 @@ public class UserEvaluationController {
         long end = System.currentTimeMillis();
         System.out.println((end - start)  + "ms");
         return UserDataFactory.userdataGenerator(userData);
+
+    }
+
+    @RequestMapping(value = "/users",method = RequestMethod.GET)
+    public List<UserResponseResource> getUsers(){
+        long start = System.currentTimeMillis();
+        List<Userdata> userdataList = userEvaluationRepository.findAll();
+        List<UserResponseResource> responseResources =
+                userdataList.stream().map(userdata -> UserDataFactory.userdataGenerator(userdata)).collect(Collectors.toList());
+        long end = System.currentTimeMillis();
+        System.out.println((end - start)  + "ms");
+        return responseResources;
 
     }
 
