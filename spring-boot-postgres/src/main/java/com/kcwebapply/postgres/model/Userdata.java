@@ -23,8 +23,7 @@ public class Userdata {
     @Column(name="score")
     private int score;
 
-    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    @OneToMany(mappedBy = "user",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
     private List<Post> posts;
 
 }
