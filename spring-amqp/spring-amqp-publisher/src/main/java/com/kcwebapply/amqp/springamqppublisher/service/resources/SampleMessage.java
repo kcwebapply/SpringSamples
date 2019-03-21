@@ -1,4 +1,4 @@
-package com.kcwebapply.amqp.springamqpconsumer.controller.resources;
+package com.kcwebapply.amqp.springamqppublisher.service.resources;
 
 
 import lombok.Data;

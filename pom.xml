@@ -24,6 +24,7 @@
         <module>batch</module>
         <module>spring-swagger</module>
         <module>spring-graphql</module>
+        <module>spring-amqp</module>
     </modules>
 
     <properties>
