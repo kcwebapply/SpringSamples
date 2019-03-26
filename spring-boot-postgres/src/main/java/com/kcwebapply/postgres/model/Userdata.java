@@ -10,6 +10,21 @@ import java.util.List;
 @Entity
 @Table(name = "userdata")
 @Data
+@NamedEntityGraph(name="Userdata.posts",
+        attributeNodes = {
+                @NamedAttributeNode(value="name"),
+                @NamedAttributeNode(value="score"),
+                @NamedAttributeNode(value="posts")
+        },
+        subgraphs = {
+                @NamedSubgraph(name="post.graph",
+                        attributeNodes = {
+                                @NamedAttributeNode(value="title"),
+                                @NamedAttributeNode(value="content")
+                        }
+                        )
+        }
+)
 public class Userdata {
 
     @Id
@@ -23,7 +38,7 @@ public class Userdata {
     @Column(name="score")
     private int score;
 
-    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user")
     private List<Post> posts;
 
 }

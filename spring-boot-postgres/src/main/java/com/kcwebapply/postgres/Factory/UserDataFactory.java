@@ -10,10 +10,6 @@ public class UserDataFactory {
             return new UserResponseResource();
         }
 
-        userdata.getPosts().stream().forEach(post ->{
-            System.out.println("postid:"+post.getUser_id()+" post-title"+post.getTitle());
-        });
-
         return new UserResponseResource(
                 userdata.getId(),
                 userdata.getName(),
