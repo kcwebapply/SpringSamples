@@ -20,7 +20,7 @@ public class SpringApiApplication {
 	public MappingJackson2HttpMessageConverter jacksonConvertor(ObjectMapper mapper){
 		MappingJackson2HttpMessageConverter convertor= new MappingJackson2HttpMessageConverter();
 		mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-		mapper.enable(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL);
+		mapper.enable(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE);
 		convertor.setObjectMapper(mapper);
 		return convertor;
 	}
