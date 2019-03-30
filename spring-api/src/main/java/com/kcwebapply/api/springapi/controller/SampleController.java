@@ -25,9 +25,8 @@ public class SampleController extends AbstractRestClientHandler{
         if(sampleBody == null){
             throw new BadRequestException("bad request","1");
         }
-        final String countryCode = sampleBody.getCountry()!=null?sampleBody.getCountry().getCode():null;
         SampleResponse response = new SampleResponse(
-                sampleBody.getId(),countryCode
+                sampleBody.getId(),sampleBody.getCountry().getCode()
         );
 
         return response;

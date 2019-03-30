@@ -25,6 +25,7 @@
     </properties>
 
     <modules>
+        <module>spring-api</module>
         <module>batch</module>
         <module>spring-swagger</module>
         <module>spring-graphql</module>
