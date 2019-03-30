@@ -20,6 +20,7 @@
     </parent>
 
     <modules>
+        <module>spring-api</module>
         <module>springdb</module>
         <module>batch</module>
         <module>spring-swagger</module>
