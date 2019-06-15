@@ -55,8 +55,7 @@ public class AmqpConfiguration {
                 .timeZone("Asia/Tokyo")
                 .build();
         Jackson2JsonMessageConverter jackson2JsonMessageConverter
-                = new Jackson2JsonMessageConverter();
-        jackson2JsonMessageConverter.setJsonObjectMapper(objectMapper);
+                = new Jackson2JsonMessageConverter(objectMapper);
 
         return jackson2JsonMessageConverter;
     }
